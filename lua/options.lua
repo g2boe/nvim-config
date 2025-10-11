@@ -13,7 +13,7 @@ local options = {
     shiftwidth = 4,
     tabstop = 4,
     number = true,
-    relativenumber = false,
+    relativenumber = true,
     numberwidth = 4,
     wrap = false,
 }

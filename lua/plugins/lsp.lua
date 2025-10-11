@@ -12,6 +12,7 @@ return {
                 ensure_installed = {
                     "gopls",
                     "lua_ls",
+                    "clangd",
                 },
             })
         end,
@@ -21,5 +22,9 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
         end,
+    },
+    {
+        "hrsh7th/nvim-cmp",
+        dependencies = { "hrsh7th/cmp-nvim-lsp" },
     },
 }
