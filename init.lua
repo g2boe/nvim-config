@@ -50,6 +50,9 @@ vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {})
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 
+vim.keymap.set('n', '<leader>e', vim.cmd.Ex, {})
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
+
 local cmp = require("cmp")
 
 cmp.setup({
