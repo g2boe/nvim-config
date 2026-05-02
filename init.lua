@@ -1,16 +1,8 @@
 require("config.lazy")
-require("nvim-tree-config")
-require("options")
--- You don't need to set any of these options.
--- IMPORTANT!: this is only a showcase of how you can set default options!
-require("telescope").setup {
-    extensions = {
-    },
-}
--- To get telescope-file-browser loaded and working with telescope,
--- you need to call load_extension, somewhere after setup function:
--- require("telescope").load_extension "file_browser"
---
+require("config.telescope")
+require("config.options")
+require("config.netrw")
+
 vim.diagnostic.config({
     virtual_text = true,
     signs = true,
@@ -22,20 +14,12 @@ vim.diagnostic.config({
 
 vim.cmd("colorscheme kanagawa")
 
-local builtin = require('telescope.builtin')
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = 'Telescope help tags' })
-
 -- Global mappings for LSP features
 -- Use <leader> followed by a key
 vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {})
 vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {})
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
 
-vim.keymap.set('n', '<leader>e', vim.cmd.Ex, {})
-vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 
 local cmp = require("cmp")
 
