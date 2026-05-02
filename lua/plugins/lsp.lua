@@ -13,6 +13,8 @@ return {
                     "gopls",
                     "lua_ls",
                     "clangd",
+                    "vhdl_ls",
+                    "verible",
                 },
             })
         end,
