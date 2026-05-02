@@ -11,6 +11,13 @@ if has_telescope then
     keymap("n", "<leader>fg", builtin.live_grep, { desc = 'Telescope live grep' })
     keymap("n", "<leader>fb", builtin.buffers, { desc = 'Telescope buffers' })
     keymap("n", "<leader>fh", builtin.help_tags, { desc = 'Telescope help tags' })
+    keymap("n", "<leader>fr", builtin.resume, { desc = 'Telescope resume' })
+    keymap("n", "<leader>fo", builtin.oldfiles, { desc = 'Telescope old files' })
+    keymap("n", "<leader>fw", builtin.grep_string, { desc = 'Telescope grep word' })
+    keymap("n", "<leader>fd", builtin.diagnostics, { desc = 'Telescope diagnostics' })
+    keymap("n", "<leader>gs", builtin.git_status, { desc = 'Telescope git status' })
+    keymap("n", "<leader>fk", builtin.keymaps, { desc = 'Telescope keymaps' })
+    keymap("n", "<leader>fu", "<cmd>Telescope undo<cr>", { desc = 'Telescope undo' })
 end
 
 -- ToggleTerm
